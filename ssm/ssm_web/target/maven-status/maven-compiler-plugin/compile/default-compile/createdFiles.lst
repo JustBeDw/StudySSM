@@ -1,0 +1,5 @@
+com\ssm\controller\OrdersController.class
+com\ssm\controller\PermissionController.class
+com\ssm\controller\ProductController.class
+com\ssm\controller\RoleController.class
+com\ssm\controller\UserController.class

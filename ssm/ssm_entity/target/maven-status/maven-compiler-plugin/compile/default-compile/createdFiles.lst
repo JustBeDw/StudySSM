@@ -1,0 +1,7 @@
+com\ssm\entity\UserInfo.class
+com\ssm\entity\Member.class
+com\ssm\entity\Permission.class
+com\ssm\entity\Orders.class
+com\ssm\entity\Traveller.class
+com\ssm\entity\Product.class
+com\ssm\entity\Role.class
