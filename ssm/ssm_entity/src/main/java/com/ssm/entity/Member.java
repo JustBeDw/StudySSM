@@ -5,13 +5,29 @@ import jdk.nashorn.internal.objects.annotations.Setter;
 /**
  * @author Administrator
  * @date 2020-04-28 23:22
+ * 成员类
  */
 public class Member {
 
+    /**
+     * 成员唯一标识
+     */
     private int id;
+    /**
+     * 成员名
+     */
     private String name;
+    /**
+     * 成员姓
+     */
     private String nickname;
+    /**
+     * 手机号
+     */
     private String phoneNum;
+    /**
+     * 邮件
+     */
     private String email;
 
     public int getId() {

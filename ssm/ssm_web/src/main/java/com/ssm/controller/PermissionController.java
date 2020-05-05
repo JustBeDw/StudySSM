@@ -1,11 +1,13 @@
 package com.ssm.controller;
 
 
+import com.github.pagehelper.PageInfo;
 import com.ssm.entity.Permission;
 import com.ssm.service.IPermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -23,10 +25,13 @@ public class PermissionController {
 
 
     @RequestMapping("/findAll.do")
-    public ModelAndView findAll() throws Exception {
+    public ModelAndView findAll(@RequestParam(name = "page",required = true,defaultValue = "1")Integer page,
+                                @RequestParam(name = "size", required = true,defaultValue = "4")Integer size
+    ) throws Exception {
         ModelAndView modelAndView = new ModelAndView();
-        List<Permission> permissionList = iPermissionService.findAll();
-        modelAndView.addObject("permissionList",permissionList);
+        List<Permission> permissionList = iPermissionService.findAll(page,size);
+        PageInfo pageInfo = new PageInfo(permissionList);
+        modelAndView.addObject("pageInfo",pageInfo);
         modelAndView.setViewName("permission-list");
         return modelAndView;
     }

@@ -9,6 +9,12 @@ import org.apache.ibatis.annotations.Select;
  */
 public interface IMemberDao {
 
+    /**
+     * 查询所有成员
+     * @param Id
+     * @return
+     * @throws Exception
+     */
     @Select("select * from member")
     public Member findById(int Id) throws Exception;
 }

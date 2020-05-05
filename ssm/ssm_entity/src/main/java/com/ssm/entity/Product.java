@@ -8,6 +8,7 @@ import java.util.Date;
 /**
  * @author Administrator
  * @date 2020-04-27 16:17
+ * 产品类
  */
 public class Product {
     /**
@@ -28,6 +29,7 @@ public class Product {
     private String cityName;
     /**
      * 出发时间
+     * 处理Date类型
      * */
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date departureTime;

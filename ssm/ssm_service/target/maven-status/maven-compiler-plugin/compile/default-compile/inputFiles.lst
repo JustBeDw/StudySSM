@@ -1,6 +1,8 @@
 D:\code\IDEA\ssm\ssm_service\src\main\java\com\ssm\service\IPermissionService.java
 D:\code\IDEA\ssm\ssm_service\src\main\java\com\ssm\service\impl\RoleServiceImpl.java
+D:\code\IDEA\ssm\ssm_service\src\main\java\com\ssm\service\ISysService.java
 D:\code\IDEA\ssm\ssm_service\src\main\java\com\ssm\service\impl\UserServiceImpl.java
+D:\code\IDEA\ssm\ssm_service\src\main\java\com\ssm\service\impl\SysServiceImpl.java
 D:\code\IDEA\ssm\ssm_service\src\main\java\com\ssm\service\IProductService.java
 D:\code\IDEA\ssm\ssm_service\src\main\java\com\ssm\service\impl\OrdersServiceImpl.java
 D:\code\IDEA\ssm\ssm_service\src\main\java\com\ssm\service\impl\PermissionServiceImpl.java

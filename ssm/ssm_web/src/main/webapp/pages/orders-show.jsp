@@ -88,7 +88,7 @@
 			<ol class="breadcrumb">
 				<li><a href="${pageContext.request.contextPath}/index.jsp"><i
 						class="fa fa-dashboard"></i> 首页</a></li>
-				<li><a href="#">订单管理</a></li>
+				<li><a href="${pageContext.request.contextPath}/orders/findAll.do">订单管理</a></li>
 				<li class="active">订单详情</li>
 			</ol>
 			</section>
@@ -245,7 +245,7 @@
 			<b>Version</b> 1.0.8
 		</div>
 		<strong>Copyright &copy; 2019-2020 <a
-			href="http://www.jyzg.tj.cn">研究院研发部</a>.
+			href="http://www.jyzg.tj.cn">Just Be Me</a>.
 		</strong> All rights reserved. </footer>
 		<!-- 底部导航 /-->
 

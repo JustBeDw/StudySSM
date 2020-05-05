@@ -1,5 +1,6 @@
 package com.ssm.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.ssm.dao.IUserDao;
 import com.ssm.entity.Role;
 import com.ssm.entity.UserInfo;
@@ -37,7 +38,8 @@ public class UserServiceImpl implements IUserService {
      * @return
      * @throws Exception
      */
-    public List<UserInfo> findAll() throws Exception {
+    public List<UserInfo> findAll(int page,int size) throws Exception {
+        PageHelper.startPage(page, size);
         return iUserDao.findAll();
     }
 
@@ -63,33 +65,59 @@ public class UserServiceImpl implements IUserService {
     }
 
     /**
+     *
+     * @param userId
+     * @return
+     * @throws Exception
+     */
+    public List<Role> findOtherRoles(String userId) throws Exception {
+        return iUserDao.findOtherRoles(userId);
+    }
+
+    public void addRoleToUser(String userId, String[] roleIds) {
+        for (String roleId:roleIds){
+            iUserDao.addRoleToUser(userId,roleId);
+        }
+    }
+
+    /**
+     * UserService 继承了 UserDetailsService 所以重写 loadUserByUsername 方法，默认提供 username 参数
      * Spring Security验证用户账号密码是否正确
      * @param username 根据username查询用户
      * @return
      * @throws UsernameNotFoundException
      */
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        //返回一个user
         UserInfo userInfo = null;
         try {
+            //通过 username 查询用户
             userInfo = iUserDao.findByUsername(username);
         } catch (Exception e) {
             e.printStackTrace();
         }
         //处理自己用户对象封装成UserDetails对象
         User user = new User(
+                //用户名
                 userInfo.getUsername(),
+                //用户密码
                 userInfo.getPassword(),
+                //判断用户状态是否为0
                 userInfo.getStatus() == 0 ? false : true,
+                //无期限
                 true,
+                //不设长
                 true,
+                //不加锁
                 true,
+                //获取角色
                 getAurthority(userInfo.getRoles()));
         return user;
     }
 
     /**
      * 获取权限，根据权限查询权限名为USER还是ADMIN
-     * @param roles-获取用户权限
+     * @param roles 获取用户权限
      * @return
      */
     public List<SimpleGrantedAuthority>getAurthority(List<Role> roles){

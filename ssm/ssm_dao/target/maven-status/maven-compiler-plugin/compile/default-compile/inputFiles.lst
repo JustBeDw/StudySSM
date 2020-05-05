@@ -3,5 +3,6 @@ D:\code\IDEA\ssm\ssm_dao\src\main\java\com\ssm\dao\IPermissionDao.java
 D:\code\IDEA\ssm\ssm_dao\src\main\java\com\ssm\dao\ITravellerDao.java
 D:\code\IDEA\ssm\ssm_dao\src\main\java\com\ssm\dao\IMemberDao.java
 D:\code\IDEA\ssm\ssm_dao\src\main\java\com\ssm\dao\IProductDao.java
+D:\code\IDEA\ssm\ssm_dao\src\main\java\com\ssm\dao\ISysDao.java
 D:\code\IDEA\ssm\ssm_dao\src\main\java\com\ssm\dao\IOrdersDao.java
 D:\code\IDEA\ssm\ssm_dao\src\main\java\com\ssm\dao\IRoleDao.java

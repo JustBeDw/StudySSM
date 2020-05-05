@@ -10,8 +10,17 @@ import java.util.List;
  */
 public interface IPermissionService {
 
+    /**
+     *
+     * @return
+     * @throws Exception
+     */
+    List<Permission> findAll(int page,int size) throws Exception;
 
-    List<Permission> findAll() throws Exception;
-
+    /**
+     *
+     * @param permission
+     * @throws Exception
+     */
     void save(Permission permission) throws Exception;
 }

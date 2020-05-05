@@ -5,6 +5,7 @@ import com.ssm.entity.Orders;
 import com.ssm.service.IOrdersService;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,8 +25,9 @@ public class OrdersController {
     private IOrdersService ordersService;
 
     @RequestMapping("/findAll.do")
-    public ModelAndView findAll(@RequestParam(name = "page",required = true,defaultValue = "1")int page,
-                                @RequestParam(name = "size", required = true,defaultValue = "4")int size)
+    @Secured("ROLE_ADMIN")
+    public ModelAndView findAll(@RequestParam(name = "page",required = true,defaultValue = "1")Integer page,
+                                @RequestParam(name = "size", required = true,defaultValue = "4")Integer size)
             throws Exception {
 
         ModelAndView modelAndView = new ModelAndView();

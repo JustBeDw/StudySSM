@@ -16,7 +16,7 @@ public interface IProductService {
      * @return
      * @throws Exception
      */
-    public List<Product> findAll() throws Exception;
+    public List<Product> findAll(int page,int size) throws Exception;
 
     /**
      * 增加产品

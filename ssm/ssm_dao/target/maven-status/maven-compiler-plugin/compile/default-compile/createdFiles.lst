@@ -1,4 +1,5 @@
 com\ssm\dao\IUserDao.class
+com\ssm\dao\ISysDao.class
 com\ssm\dao\IRoleDao.class
 com\ssm\dao\IPermissionDao.class
 com\ssm\dao\IOrdersDao.class

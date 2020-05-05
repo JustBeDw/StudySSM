@@ -17,6 +17,7 @@ public interface IOrdersDao {
     /**
      * 查询订单所有信息
      * @Results column-数据库字段名 property-实体类属性名
+     * @One     将查询到的结果作为参数传入(select = )的方法里进行查询
      * @return
      * @throws Exception
      */
@@ -35,7 +36,8 @@ public interface IOrdersDao {
 
     /**
      * 通过订单ID查询订单信息
-     * @param ordersId
+     * @Many    与 @One 用法一致，不过 @One 查询到多行结果会抛出TooManyResultException异常，所以一对多的情况下使用@Many
+     * @param ordersId 订单主键
      * @return
      * @throws Exception
      */

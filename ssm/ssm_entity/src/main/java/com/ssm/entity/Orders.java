@@ -9,21 +9,61 @@ import java.util.List;
 /**
  * @author Administrator
  * @date 2020-04-28 22:58
+ * 订单类
  */
 public class Orders {
 
+    /**
+     * 订单唯一标识
+     */
     private int id;
+    /**
+     * 订单号
+     */
     private String orderNum;
+    /**
+     * 订单下单时间
+     */
     private Date orderTime;
+    /**
+     * 订单下单时间以字符串类型显示在页面上
+     */
     private String orderTimeStr;
+    /**
+     * 订单状态
+     */
     private int orderStatus;
+    /**
+     * 订单状态以字符串类型显示在页面上
+     */
     private String orderStatusStr;
+    /**
+     * 人数
+     */
     private int peopleCount;
+    /**
+     * 产品信息
+     */
     private Product product;
+    /**
+     * 旅客信息
+     */
     private List<Traveller> travellers;
+    /**
+     * 成员信息
+     */
     private Member member;
+    /**
+     * 支付类型
+     */
     private Integer payType;
+    /**
+     * 支付类型以字符串类型显示在页面上
+     */
     private String payTypeStr;
+    /**
+     * 订单描述
+     */
     private String orderDesc;
 
     public String getOrderStatusStr() {

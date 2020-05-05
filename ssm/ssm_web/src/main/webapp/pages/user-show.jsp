@@ -66,11 +66,11 @@
 	<div class="wrapper">
 
 		<!-- 页面头部 -->
-		<jsp:include page="header.jsp"></jsp:include>
+		<jsp:include page="header.jsp"/>
 		<!-- 页面头部 /-->
 
 		<!-- 导航侧栏 -->
-		<jsp:include page="aside.jsp"></jsp:include>
+		<jsp:include page="aside.jsp"/>
 		<!-- 导航侧栏 /-->
 
 		<!-- 内容区域 -->
@@ -143,13 +143,13 @@
 								</tr>
 
 								<tbody>
-									<c:forEach items="${user.roles}" var="role">
-										<tr data-tt-id="1" data-tt-parent-id="0">
+									<c:forEach items="${user.roles}" var="role" varStatus="vs">
+										<tr data-tt-id="${vs.index+1}" data-tt-parent-id="0">
 											<td>${role.roleName }</td>
 											<td>${role.roleDesc }</td>
 										</tr>
 										<c:forEach items="${role.permissions}" var="permission">
-											<tr data-tt-id="1-1" data-tt-parent-id="1">
+											<tr data-tt-id="1-1" data-tt-parent-id="${vs.index+1}">
 												<td>${permission.permissionName}</td>
 												<td>${permission.url}</td>
 											</tr>
@@ -213,7 +213,7 @@
 			<b>Version</b> 1.0.8
 		</div>
 		<strong>Copyright &copy; 2019-2020 <a
-			href="http://www.jyzg.tj.cn">研究院研发部</a>.
+			href="http://www.jyzg.tj.cn">Just Be Me</a>.
 		</strong> All rights reserved. </footer>
 		<!-- 底部导航 /-->
 

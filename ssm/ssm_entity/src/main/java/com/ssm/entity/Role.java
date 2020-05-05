@@ -5,13 +5,29 @@ import java.util.List;
 /**
  * @author Administrator
  * @date 2020-04-30 10:59
+ * 角色类
  */
 public class Role {
 
+    /**
+     * 角色唯一标识
+     */
     private int id;
+    /**
+     * 角色名
+     */
     private String roleName;
+    /**
+     * 角色描述
+     */
     private String roleDesc;
+    /**
+     * 权限信息
+     */
     private List<Permission> permissions;
+    /**
+     * 用户信息
+     */
     private List<UserInfo> users;
 
     public int getId() {

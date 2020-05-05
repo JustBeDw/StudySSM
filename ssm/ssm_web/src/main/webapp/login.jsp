@@ -47,7 +47,7 @@
 				<div class="row">
 					<div class="col-xs-8">
 						<div class="checkbox icheck">
-							<label><input type="checkbox"> 记住 下次自动登录</label>
+							<label><input type="checkbox"> admin:tom-123 common:fox-456</label>
 						</div>
 					</div>
 					<!-- /.col -->

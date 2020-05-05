@@ -141,7 +141,7 @@
 		<!-- 内容区域 -->
 		<div class="content-wrapper">
 
-			<img src="${pageContext.request.contextPath}/img/center.png"
+			<img src="${pageContext.request.contextPath}/img/pt4.jpg"
 				width="100%" height="100%" />
 
 		</div>
@@ -153,7 +153,7 @@
 			<b>Version</b> 1.0.8
 		</div>
 		<strong>Copyright &copy; 2019-2020 <a
-			href="http://www.jyzg.tj.cn">研究院研发部</a>.
+			href="http://www.jyzg.tj.cn">Just Be Me</a>.
 		</strong> All rights reserved. </footer>
 		<!-- 底部导航 /-->
 

@@ -1,0 +1,117 @@
+CREATE TABLE orders( 
+id INT PRIMARY KEY,
+orderNum VARCHAR(20) NOT NULL UNIQUE, 
+orderTime timestamp,
+peopleCount INT,
+orderDesc VARCHAR(500), 
+payType INT, 
+orderStatus INT, 
+productId INT, 
+memberId INT, 
+FOREIGN KEY (productId) REFERENCES product(id), 
+FOREIGN KEY (memberId) REFERENCES member(id) )
+
+
+
+
+
+
+CREATE TABLE traveller( 
+id varchar(32) PRIMARY KEY, 
+NAME VARCHAR(20), 
+sex VARCHAR(20), 
+phoneNum VARCHAR(20), 
+credentialsType INT, 
+credentialsNum VARCHAR(50),
+travellerType INT )
+
+
+CREATE TABLE order_traveller( 
+orderId INT,
+travellerId INT,
+PRIMARY KEY (orderId,travellerId), 
+FOREIGN KEY (orderId) REFERENCES orders(id), 
+FOREIGN KEY (travellerId) REFERENCES traveller(id) )
+
+
+
+
+CREATE TABLE users( 
+id varchar(32) PRIMARY KEY, 
+email VARCHAR(50) UNIQUE NOT NULL, 
+username VARCHAR(50), 
+PASSWORD VARCHAR(50), 
+phoneNum VARCHAR(20), 
+STATUS INT )
+
+
+CREATE TABLE role(
+id INT PRIMARY KEY, 
+roleName VARCHAR(50) , 
+roleDesc VARCHAR(50) )
+
+CREATE TABLE users_role( 
+userId INT, 
+roleId INT, 
+PRIMARY KEY(userId,roleId), 
+FOREIGN KEY (userId) REFERENCES users(id), 
+FOREIGN KEY (roleId) REFERENCES role(id) )
+
+
+CREATE TABLE permission(
+id INT PRIMARY KEY, 
+permissionName VARCHAR(50) , 
+url VARCHAR(50) )
+
+
+CREATE TABLE role_permission( 
+permissionId INT,
+roleId INT, 
+PRIMARY KEY(permissionId,roleId), 
+FOREIGN KEY (permissionId) REFERENCES permission(id), 
+FOREIGN KEY (roleId) REFERENCES role(id) )
+
+
+
+
+CREATE TABLE sysLog( 
+id INT PRIMARY KEY, 
+visitTime timestamp, 
+username VARCHAR(50), 
+ip VARCHAR(30), 
+url VARCHAR(50), 
+executionTime int, 
+method VARCHAR(200) )
+
+
+
+insert into ORDER_TRAVELLER (orderid, travellerid) values (6, 3); 
+insert into ORDER_TRAVELLER (orderid, travellerid) values (1, 7);
+insert into ORDER_TRAVELLER (orderid, travellerid) values (4, 7);
+
+insert into ORDERS (id, ordernum, ordertime, peoplecount, orderdesc, paytype, orderstatus, productid, memberid) values (7, '12345', 20180203120000, 2, '没什么', 0, 1, 67,61); 
+insert into ORDERS (id, ordernum, ordertime, peoplecount, orderdesc, paytype, orderstatus, productid, memberid) values (5, '54321', 20180203120000, 2, '没什么', 0, 1, 67, 61);
+insert into ORDERS (id, ordernum, ordertime, peoplecount, orderdesc, paytype, orderstatus, productid, memberid) values (2, '67890', 20180203120000, 2, '没什么', 0, 1, 12, 61); 
+insert into ORDERS (id, ordernum, ordertime, peoplecount, orderdesc, paytype, orderstatus, productid, memberid) values (6, '98765',	20180203120000, 2, '没什么', 0, 1, 12, 61); 
+insert into ORDERS (id, ordernum, ordertime, peoplecount, orderdesc, paytype, orderstatus, productid, memberid) values (4, '11111', 20180203120000, 2, '没什么', 0, 1, 12, 61);
+
+
+
+insert into ORDERS (id, ordernum, ordertime, peoplecount, orderdesc, paytype, orderstatus, productid, memberid) values (96, '22222',	20180203120000, 2, '没什么', 0, 1, 12, 61); 
+insert into ORDERS (id, ordernum, ordertime, peoplecount, orderdesc, paytype, orderstatus, productid, memberid) values (55, '33333', 20180203120000, 2, '没什么', 0, 1, 9, 61); 
+insert into ORDERS (id, ordernum, ordertime, peoplecount, orderdesc, paytype, orderstatus, productid, memberid) values (1, '44444', 20180203120000, 2, '没什么', 0, 1, 9, 61); 
+insert into ORDERS (id, ordernum, ordertime, peoplecount, orderdesc, paytype, orderstatus, productid, memberid) values (30, '55555', 20180203120000, 2, '没什么', 0, 1, 9, 61);
+
+
+insert into TRAVELLER (id, name, sex, phonenum, credentialstype, credentialsnum, travellertype) values ('3FE27DF2A4E44A6DBC5D0FE4651D3D3E', '张龙', '男', '13333333333', 0, '123456789009876543', 0); insert into TRAVELLER (id, name, sex, phonenum, credentialstype, credentialsnum, travellertype) values ('EE7A71FB6945483FBF91543DBE851960', '张小龙', '男', '15555555555', 0, '987654321123456789', 1);
+
+
+
+insert into ORDER_TRAVELLER (orderid, travellerid) values (7, 3); 
+insert into ORDER_TRAVELLER (orderid, travellerid) values (2, 3); 
+insert into ORDER_TRAVELLER (orderid, travellerid) values (30, 7); 
+insert into ORDER_TRAVELLER (orderid, travellerid) values (55, 7); 
+insert into ORDER_TRAVELLER (orderid, travellerid) values (5, 3); 
+insert into ORDER_TRAVELLER (orderid, travellerid) values (96, 7); 
+
+

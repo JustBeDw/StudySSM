@@ -6,15 +6,45 @@ import jdk.nashorn.internal.objects.annotations.Setter;
  * @author Administrator
  * @date 2020-04-28 23:22
  */
+/**
+ * 旅客类
+ */
 public class Traveller {
+    /**
+     * 旅客唯一标识
+     */
     private int id;
+    /**
+     * 旅客姓名
+     */
     private String name;
+    /**
+     * 旅客性别
+     */
     private String sex;
+    /**
+     * 旅客手机号
+     */
     private String phoneNum;
+    /**
+     * 旅客证
+     */
     private Integer credentialsType;
+    /**
+     * 旅客证以字符串类型显示在页面上
+     */
     private String credentialsTypeStr;
+    /**
+     * 旅客证号
+     */
     private String credentialsNum;
+    /**
+     * 旅客类型
+     */
     private Integer travellerType;
+    /**
+     * 旅客类型以字符串类型显示在页面上
+     */
     private String travellerTypeStr;
 
     public int getId() {

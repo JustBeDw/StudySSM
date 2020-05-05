@@ -23,7 +23,7 @@ public interface IProductDao {
 
     /**
      * 通过ID查询产品
-     * @param id
+     * @param id - orders 传过来的productId参数
      * @return
      * @throws Exception
      */

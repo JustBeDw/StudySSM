@@ -1,6 +1,8 @@
 package com.ssm.service;
 
+import com.ssm.entity.Permission;
 import com.ssm.entity.Role;
+import org.apache.ibatis.annotations.Results;
 
 import java.util.List;
 
@@ -14,7 +16,7 @@ public interface IRoleService {
      * 查询所有角色
      * @return
      */
-    List<Role> findAll() throws Exception;
+    List<Role> findAll(int page,int size) throws Exception;
 
 
     /**
@@ -22,4 +24,10 @@ public interface IRoleService {
      * @param role 角色
      */
     void save(Role role) throws Exception;
+
+    Role findById(String roleId) throws Exception;
+
+    List<Permission> findOtherPermissions(String roleId) throws Exception;
+
+    void addPermissionToRole(int[] permissionIds,int roleId) throws Exception;
 }

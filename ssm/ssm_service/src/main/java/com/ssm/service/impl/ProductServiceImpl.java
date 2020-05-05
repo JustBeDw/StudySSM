@@ -1,5 +1,6 @@
 package com.ssm.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.ssm.dao.IProductDao;
 import com.ssm.entity.Product;
 import com.ssm.service.IProductService;
@@ -20,7 +21,8 @@ public class ProductServiceImpl implements IProductService {
     @Autowired
     private IProductDao iProductDao;
 
-    public List<Product> findAll() throws Exception {
+    public List<Product> findAll(int page,int size) throws Exception {
+        PageHelper.startPage(page, size);
         return iProductDao.findAll();
     }
 
