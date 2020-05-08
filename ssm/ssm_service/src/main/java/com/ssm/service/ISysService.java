@@ -10,7 +10,20 @@ import java.util.List;
  */
 public interface ISysService {
 
+    /**
+     * 新增日志
+     * @param sysLog
+     * @throws Exception
+     */
     public void save(SysLog sysLog) throws Exception;
 
-    List<SysLog> findAll(int page,int size) throws Exception;
+    /**
+     * 查询日志
+     * @ param page
+     * @ param size
+     * @return
+     * @throws Exception
+     */
+    //int page,int size
+    List<SysLog> findAll() throws Exception;
 }

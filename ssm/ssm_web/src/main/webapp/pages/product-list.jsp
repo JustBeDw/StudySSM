@@ -198,9 +198,9 @@
 											onclick="location.href='${pageContext.request.contextPath}/pages/product-add.jsp'">
 											<i class="fa fa-file-o"></i> <a>新建</a>
 										</button>
-										<button type="button" class="btn btn-default" title="删除">
-											<i class="fa fa-trash-o"></i> <a>删除</a>
-										</button>
+<%--										<button type="button" class="btn btn-default" title="删除">--%>
+<%--											<i class="fa fa-trash-o"></i> <a>删除</a>--%>
+<%--										</button>--%>
 										<button type="button" class="btn btn-default" title="刷新">
 											<i class="fa fa-refresh"></i> <a href="${pageContext.request.contextPath}/product/findAll.do"> 刷新</a>
 										</button>
@@ -244,9 +244,9 @@
 											<td>${product.productDesc }</td>
 											<td class="text-center">${product.productStatusStr }</td>
 											<td class="text-center">
-												<button type="button" class="btn bg-olive btn-xs">订单</button>
-												<button type="button" class="btn bg-olive btn-xs">详情</button>
-												<button type="button" class="btn bg-olive btn-xs">编辑</button>
+												<button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/orders/findAll.do'">订单</button>
+<%--												<button type="button" class="btn bg-olive btn-xs">详情</button>--%>
+												<button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/product/delete.do?id=${product.id}'">删除</button>
 											</td>
 										</tr>
 									</c:forEach>

@@ -2,6 +2,7 @@ package com.ssm.dao;
 
 import com.ssm.entity.Traveller;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -9,6 +10,7 @@ import java.util.List;
  * @author Administrator
  * @date 2020-04-29 20:18
  */
+@Repository
 public interface ITravellerDao {
 
     /**
@@ -18,5 +20,5 @@ public interface ITravellerDao {
      * @throws Exception
      */
     @Select("SELECT * FROM traveller where id in (SELECT travellerId FROM order_traveller WHERE orderId = #{ordersId})")
-    List<Traveller> findByOrdersId(int ordersId) throws Exception;
+    public List<Traveller> findByOrdersId(int ordersId) throws Exception;
 }

@@ -120,7 +120,7 @@ public class UserServiceImpl implements IUserService {
      * @param roles 获取用户权限
      * @return
      */
-    public List<SimpleGrantedAuthority>getAurthority(List<Role> roles){
+    public List<SimpleGrantedAuthority> getAurthority(List<Role> roles){
         List<SimpleGrantedAuthority> list = new ArrayList<SimpleGrantedAuthority>();
 
         for (Role role : roles){

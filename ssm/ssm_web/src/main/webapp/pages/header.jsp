@@ -34,9 +34,9 @@
 
 						<!-- Menu Footer-->
 						<li class="user-footer">
-							<div class="pull-left">
-								<a href="#" class="btn btn-default btn-flat">修改密码</a>
-							</div>
+<%--							<div class="pull-left">--%>
+<%--								<a href="#" class="btn btn-default btn-flat" onclick="location.href='${pageContext.request.contextPath}/users/update.do?id=${users.id}'">修改密码</a>--%>
+<%--							</div>--%>
 							<div class="pull-right">
 								<a href="${pageContext.request.contextPath}/logout.do"
 									class="btn btn-default btn-flat">注销</a>

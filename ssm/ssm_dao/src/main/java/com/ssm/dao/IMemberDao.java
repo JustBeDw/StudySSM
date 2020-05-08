@@ -11,10 +11,10 @@ public interface IMemberDao {
 
     /**
      * 查询所有成员
-     * @param Id
+     * @param Id 成员
      * @return
      * @throws Exception
      */
-    @Select("select * from member")
+    @Select("select * from member where id = #{Id}")
     public Member findById(int Id) throws Exception;
 }

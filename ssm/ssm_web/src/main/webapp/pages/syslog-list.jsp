@@ -143,7 +143,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach items="${pageInfo.list}" var="syslog">
+								<c:forEach items="${sysLogList}" var="syslog">
 									<tr>
 										<td><input name="ids" type="checkbox"></td>
 										<td>${syslog.id}</td>
@@ -168,18 +168,18 @@
 
 				<!-- .box-footer-->
 				<div class="box-footer">
-					<div class="pull-left">
-						<div class="form-group form-inline">
-							总共${pageInfo.pages}页，共${pageInfo.pageSize*pageInfo.pages}数据。 每页
-							<select class="form-control" id="changePageSize" onchange="changePageSize()">
-								<option>10</option>
-								<option>15</option>
-								<option>20</option>
-								<option>50</option>
-								<option>80</option>
-							</select> 条
-						</div>
-					</div>
+<%--					<div class="pull-left">--%>
+<%--						<div class="form-group form-inline">--%>
+<%--							总共${pageInfo.pages}页，共${pageInfo.pageSize*pageInfo.pages}数据。 每页--%>
+<%--							<select class="form-control" id="changePageSize" onchange="changePageSize()">--%>
+<%--								<option>10</option>--%>
+<%--								<option>15</option>--%>
+<%--								<option>20</option>--%>
+<%--								<option>50</option>--%>
+<%--								<option>80</option>--%>
+<%--							</select> 条--%>
+<%--						</div>--%>
+<%--					</div>--%>
 
 					<div class="box-tools pull-right">
 						<ul class="pagination">

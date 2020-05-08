@@ -70,6 +70,11 @@ public class UserController {
         return modelAndView;
     }
 
+//    @RequestMapping("/update.do")
+//    public String update(String id){
+//        iUserService.update(id);
+//        return "redirect:findAll.do";
+//    }
 
     /**
      * 展示查询可以添加的权限的视图

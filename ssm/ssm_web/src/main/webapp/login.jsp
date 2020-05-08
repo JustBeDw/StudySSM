@@ -47,7 +47,7 @@
 				<div class="row">
 					<div class="col-xs-8">
 						<div class="checkbox icheck">
-							<label><input type="checkbox"> admin:tom-123 common:fox-456</label>
+							<label>admin:tom-123 <br/> common:fox-456</label>
 						</div>
 					</div>
 					<!-- /.col -->

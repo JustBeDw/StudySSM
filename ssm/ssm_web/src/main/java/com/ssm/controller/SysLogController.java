@@ -22,15 +22,16 @@ public class SysLogController {
     @Autowired
     private ISysService iSysService;
 
+    //@RequestParam(name = "page",required = true,defaultValue = "1")Integer page,
+    //                                @RequestParam(name = "size",required = true,defaultValue = "10")Integer size
     @RequestMapping("/findAll.do")
-    public ModelAndView findAll(@RequestParam(name = "page",required = true,defaultValue = "1")Integer page,
-                                @RequestParam(name = "size",required = true,defaultValue = "10")Integer size
-    ) throws Exception {
+    public ModelAndView findAll() throws Exception {
         ModelAndView modelAndView = new ModelAndView();
-        List<SysLog> sysLogList = iSysService.findAll(page,size);
-        PageInfo pageInfo = new PageInfo(sysLogList);
-        modelAndView.addObject("pageInfo",pageInfo);
+        List<SysLog> sysLogList = iSysService.findAll();
+       // PageInfo pageInfo = new PageInfo(sysLogList);
+        modelAndView.addObject("sysLogList",sysLogList);
         modelAndView.setViewName("syslog-list");
         return modelAndView;
     }
+
 }

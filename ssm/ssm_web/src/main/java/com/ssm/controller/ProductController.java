@@ -52,4 +52,10 @@ public class ProductController {
         return "redirect:findAll.do";
     }
 
+    @RequestMapping("/delete.do")
+    public String delete(Integer id) throws Exception {
+        productService.delete(id);
+        return "redirect:findAll.do";
+    }
+
 }

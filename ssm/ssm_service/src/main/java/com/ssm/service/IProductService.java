@@ -24,4 +24,6 @@ public interface IProductService {
      * @throws Exception
      */
     public void save(Product product) throws Exception;
+
+    public void delete(int id) throws Exception;
 }

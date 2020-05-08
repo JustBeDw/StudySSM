@@ -29,4 +29,8 @@ public class ProductServiceImpl implements IProductService {
     public void save(Product product) throws Exception {
         iProductDao.save(product);
     }
+
+    public void delete(int id) throws Exception{
+        iProductDao.delete(id);
+    }
 }

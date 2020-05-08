@@ -198,9 +198,9 @@
 											onclick="location.href='${pageContext.request.contextPath}/pages/product-add.jsp'">
 											<i class="fa fa-file-o"></i> <a>新建</a>
 										</button>
-										<button type="button" class="btn btn-default" title="删除">
-											<i class="fa fa-trash-o"></i> <a>删除</a>
-										</button>
+<%--										<button type="button" class="btn btn-default" title="删除">--%>
+<%--											<i class="fa fa-trash-o"></i> <a>删除</a>--%>
+<%--										</button>--%>
 										</button>
 										<button type="button" class="btn btn-default" title="刷新">
 											<i class="fa fa-refresh"></i> <a style="text-decoration: none" href="${pageContext.request.contextPath}/orders/findAll.do">刷新</a>
@@ -241,7 +241,7 @@
 											<td>${orders.orderTimeStr }</td>
 											<td class="text-center">${orders.orderStatusStr }</td>
 											<td class="text-center">
-												<button type="button" class="btn bg-olive btn-xs">订单</button>
+<%--												<button type="button" class="btn bg-olive btn-xs">订单</button>--%>
 												<button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/orders/findById.do?id=${orders.id}'">详情</button>
 												<button type="button" class="btn bg-olive btn-xs">编辑</button>
 											</td>

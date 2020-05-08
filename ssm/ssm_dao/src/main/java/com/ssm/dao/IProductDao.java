@@ -1,8 +1,10 @@
 package com.ssm.dao;
 
 import com.ssm.entity.Product;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -38,4 +40,8 @@ public interface IProductDao {
     @Insert("insert into product (productNum,productName,cityName,departureTime,productPrice,productDesc,productStatus)" +
             "values(#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},#{productDesc},#{productStatus})")
     public void save(Product product);
+
+
+    @Delete("delete from product where id = #{id}")
+    void delete(int id);
 }

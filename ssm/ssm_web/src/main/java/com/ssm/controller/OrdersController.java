@@ -40,7 +40,7 @@ public class OrdersController {
     }
 
     @RequestMapping("/findById.do")
-    public ModelAndView findById(@RequestParam(name = "id",required = true) int ordersId) throws Exception {
+    public ModelAndView findById(@RequestParam(name = "id",required = true) Integer ordersId) throws Exception {
         ModelAndView modelAndView = new ModelAndView();
         Orders orders = ordersService.findById(ordersId);
         modelAndView.addObject("orders",orders);

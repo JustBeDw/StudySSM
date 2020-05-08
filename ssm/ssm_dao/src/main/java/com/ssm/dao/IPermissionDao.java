@@ -3,6 +3,7 @@ package com.ssm.dao;
 import com.ssm.entity.Permission;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @author Administrator
  * @date 2020-04-30 18:16
  */
+@Repository
 public interface IPermissionDao {
 
 

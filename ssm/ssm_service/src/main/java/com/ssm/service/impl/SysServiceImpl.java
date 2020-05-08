@@ -1,6 +1,5 @@
 package com.ssm.service.impl;
 
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.ssm.dao.ISysDao;
 import com.ssm.entity.SysLog;
@@ -27,8 +26,9 @@ public class SysServiceImpl implements ISysService {
         iSysDao.save(sysLog);
     }
 
-    public List<SysLog> findAll(int page,int size) throws Exception {
-        PageHelper.startPage(page, size);
+    //int page,int size
+    public List<SysLog> findAll() throws Exception {
+        //PageHelper.startPage(page, size);
         return iSysDao.findAll();
     }
 }
